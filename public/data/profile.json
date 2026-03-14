@@ -1,0 +1,16 @@
+{
+  "name": "Theo Couasnon",
+  "title": "Automotive Engineer",
+  "tagline": "Engineering student specializing in automotive design, motorsport, and vehicle systems",
+  "bio": "I am an engineering student at ESTACA Laval, specializing in automotive engineering with a focus on mechanics and electronics. Passionate about motorsport, I've gained hands-on experience at McLaren F1 Team, Aston Martin Racing, and rally teams across Europe. I combine mechanical design expertise with a strong interest in hybrid powertrains, vehicle control systems, and CAN communication.",
+  "photo": "/images/profile.jpg",
+  "email": "theo.couasnon@estaca.eu",
+  "phone": "+33 7 68 64 33 04",
+  "location": "France",
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/theo-couasnon/",
+    "youtube": "https://www.youtube.com/@tcsn",
+    "github": ""
+  },
+  "resumeUrl": "/documents/CV_Theo_Couasnon.pdf"
+}

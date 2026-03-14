@@ -1,0 +1,89 @@
+{
+  "projects": [
+    {
+      "title": "Volta — Electric Race Car",
+      "category": "academic",
+      "image": "/images/projects/volta.jpg",
+      "description": "Led the Control Systems division for an electric race car retrofit project. Designed and implemented the vehicle's electronic control architecture, including battery management, motor control, and CAN bus communication systems.",
+      "tags": ["Electric Vehicle", "Control Systems", "CAN Bus", "Team Lead"],
+      "year": "2023",
+      "links": {}
+    },
+    {
+      "title": "ITD President — Motorsport Club",
+      "category": "academic",
+      "image": "/images/projects/itd.jpg",
+      "description": "Served as president of a 100-member motorsport development club managing a budget exceeding €100,000. Led organizational strategy, team coordination, and event management across multiple motorsport disciplines.",
+      "tags": ["Leadership", "Motorsport", "Management", "€100k+ Budget"],
+      "year": "2022–2023",
+      "links": {}
+    },
+    {
+      "title": "Team Aérios — F1 in Schools",
+      "category": "academic",
+      "image": "/images/projects/aerios.jpg",
+      "description": "Technical Director for the first French team to qualify for the F1 in Schools World Finals. Led the aerodynamic and mechanical design of the miniature F1 car, managing CAD, CFD analysis, and manufacturing.",
+      "tags": ["F1 in Schools", "Aerodynamics", "Tech Director", "World Finals"],
+      "year": "2020",
+      "links": {}
+    },
+    {
+      "title": "Saar-e — Electric Rally Vehicle",
+      "category": "academic",
+      "image": "/images/projects/saar-e.jpg",
+      "description": "Responsible for electrical engineering on an electric Yamaha YXZ1000 competing in the Carta rally. Designed the high-voltage electrical system, wiring harness, and integration of power electronics.",
+      "tags": ["Electric Vehicle", "Electrical Engineering", "Rally", "HV Systems"],
+      "year": "2023",
+      "links": {}
+    },
+    {
+      "title": "Yamaha SR125 Café Racer",
+      "category": "personal",
+      "image": "/images/projects/yamaha-sr125.jpg",
+      "description": "Complete café racer modification of a Yamaha SR125 motorcycle, documented on YouTube with over 60,000 views. Custom subframe, seat, tank modifications, paint, and electrical rewiring.",
+      "tags": ["Motorcycle", "Café Racer", "Custom Build", "YouTube"],
+      "year": "2020",
+      "links": {
+        "youtube": "https://www.youtube.com/@tcsn"
+      }
+    },
+    {
+      "title": "Electric Bike Conversion",
+      "category": "personal",
+      "image": "/images/projects/electric-bike.jpg",
+      "description": "1000W electric bike conversion kit project that generated over 100,000 YouTube views and more than €30,000 in sales. Documented the entire build process and created a product line.",
+      "tags": ["Electric Bike", "1000W", "100k+ Views", "€30k+ Sales"],
+      "year": "2021",
+      "links": {
+        "youtube": "https://www.youtube.com/@tcsn"
+      }
+    },
+    {
+      "title": "Helmet Bluetooth Audio",
+      "category": "personal",
+      "image": "/images/projects/helmet-audio.jpg",
+      "description": "Custom Bluetooth audio system for motorcycle helmets using recycled speakers and 3D-printed mounting hardware. Designed for weatherproofing and optimal sound quality within helmet constraints.",
+      "tags": ["3D Printing", "Bluetooth", "Audio", "Recycled Materials"],
+      "year": "2021",
+      "links": {}
+    },
+    {
+      "title": "LED Desk Lamp",
+      "category": "personal",
+      "image": "/images/projects/led-lamp.jpg",
+      "description": "Custom CAD-designed and 3D-printed LED desk lamp with surface-mounted LEDs and functional aesthetic. Designed as a complete product with clean cable management and adjustable lighting.",
+      "tags": ["CAD", "3D Printing", "LED", "Product Design"],
+      "year": "2020",
+      "links": {}
+    },
+    {
+      "title": "Motion-Activated Light",
+      "category": "personal",
+      "image": "/images/projects/motion-light.jpg",
+      "description": "Arduino-based infrared motion detector light system. Programmed PIR sensor logic with adjustable sensitivity and timeout, integrated into a custom 3D-printed housing.",
+      "tags": ["Arduino", "PIR Sensor", "Electronics", "3D Printing"],
+      "year": "2019",
+      "links": {}
+    }
+  ]
+}

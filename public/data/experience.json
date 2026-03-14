@@ -1,0 +1,44 @@
+{
+  "experiences": [
+    {
+      "company": "McLaren F1 Team",
+      "logo": "/images/logos/mclaren.png",
+      "role": "Mechanical Design Engineer",
+      "department": "Transmission / Gearbox & Process Improvement",
+      "period": "2024",
+      "location": "Woking, UK",
+      "description": "Worked on transmission and gearbox mechanical design for the Formula 1 car, contributing to process improvement initiatives within the engineering team.",
+      "tags": ["Formula 1", "Mechanical Design", "Gearbox", "CAD"]
+    },
+    {
+      "company": "Aston Martin Racing (Prodrive)",
+      "logo": "/images/logos/aston-martin.png",
+      "role": "Design Engineer Assistant",
+      "department": "Vantage GT3 Evo Programme",
+      "period": "2023",
+      "location": "Banbury, UK",
+      "description": "Assisted the design engineering team on the Aston Martin Vantage GT3 Evo programme, contributing to component design and development for the GT racing car.",
+      "tags": ["GT Racing", "Design Engineering", "Motorsport", "CAD"]
+    },
+    {
+      "company": "PH Sport",
+      "logo": "/images/logos/ph-sport.png",
+      "role": "Mechanic",
+      "department": "WRC / Rally Vehicles",
+      "period": "2022",
+      "location": "France",
+      "description": "Hands-on mechanical work on World Rally Championship vehicles, gaining deep understanding of rally car systems and race preparation.",
+      "tags": ["WRC", "Rally", "Mechanical", "Race Prep"]
+    },
+    {
+      "company": "2C Compétition",
+      "logo": "/images/logos/2c-competition.png",
+      "role": "Mechanic / Engineer",
+      "department": "Škoda Fabia Rally2",
+      "period": "2021",
+      "location": "France",
+      "description": "Combined mechanical and engineering duties on the Škoda Fabia Rally2, supporting race operations and vehicle maintenance during rally events.",
+      "tags": ["Rally", "Škoda", "Engineering", "Race Operations"]
+    }
+  ]
+}

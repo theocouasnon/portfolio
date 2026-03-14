@@ -1,0 +1,38 @@
+{
+  "categories": [
+    {
+      "name": "Engineering",
+      "icon": "⚙️",
+      "skills": [
+        "Hybrid Powertrain Architecture",
+        "Vehicle Control Systems",
+        "CAN Communication",
+        "Transmission & Gearbox Design",
+        "Mechanical Design",
+        "Manufacturing (CNC, Laser, Additive)"
+      ]
+    },
+    {
+      "name": "Digital Tools",
+      "icon": "💻",
+      "skills": [
+        "SolidWorks",
+        "CATIA V5",
+        "Siemens NX",
+        "MATLAB / Simulink",
+        "Windarab",
+        "RaceStudio 3",
+        "MoTeC i2"
+      ]
+    },
+    {
+      "name": "Languages",
+      "icon": "🌍",
+      "skills": [
+        "French — Native",
+        "English — C1 (TOEIC 825)",
+        "Spanish — A2"
+      ]
+    }
+  ]
+}

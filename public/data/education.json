@@ -1,0 +1,13 @@
+{
+  "education": [
+    {
+      "institution": "ESTACA",
+      "logo": "/images/logos/estaca.png",
+      "degree": "Engineering Diploma",
+      "field": "Automotive Engineering — Mechanics & Electronics",
+      "period": "2020 – 2025",
+      "location": "Laval, France",
+      "description": "Five-year engineering programme specializing in vehicle systems, powertrain, and automotive electronics."
+    }
+  ]
+}
