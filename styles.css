@@ -249,7 +249,7 @@ a.exp-card {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--color-primary);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent-mid));
   transition: width var(--transition);
 }
 .nav-link:hover,
@@ -460,4 +460,19 @@ a.exp-card {
 }
 @media (max-width: 480px) {
   .container { padding: 0 var(--space-md); }
+}
+
+/* ── CUSTOM SCROLLBAR ──────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-sm);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-mid);
 }
