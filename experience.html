@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience — Theo Couasnon</title>
+  <meta name="description" content="Professional experience of Theo Couasnon — McLaren F1, Dallara, Prodrive, PH Sport, 2C Competition. Motorsport engineering internships and roles." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── TIMELINE ─────────────────────────────── */
+    .timeline-section { padding: var(--space-3xl) 0; }
+    .timeline {
+      position: relative;
+      margin-top: var(--space-2xl);
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 28px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--color-primary), var(--color-accent-mid));
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 72px;
+      margin-bottom: var(--space-2xl);
+    }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-dot {
+      position: absolute;
+      left: 20px;
+      top: 4px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      border: 3px solid var(--color-bg);
+      box-shadow: 0 0 0 2px var(--color-primary);
+      z-index: 1;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .timeline-item:hover .timeline-dot {
+      transform: scale(1.25);
+      box-shadow: 0 0 0 3px var(--color-primary), 0 0 12px rgba(12,68,102,0.3);
+    }
+
+    .timeline-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border-soft);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      transition: box-shadow var(--transition), border-color var(--transition);
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+    .timeline-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-border);
+    }
+    .timeline-card-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .timeline-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+      flex-wrap: wrap;
+    }
+    .timeline-company {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+    }
+    .timeline-role {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-top: 2px;
+    }
+    .timeline-period {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      white-space: nowrap;
+      background: var(--color-surface-2);
+      padding: 4px 10px;
+      border-radius: 20px;
+      flex-shrink: 0;
+    }
+    .timeline-location {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      margin-top: var(--space-xs);
+    }
+    .timeline-divider {
+      height: 1px;
+      background: var(--color-border-soft);
+      margin: var(--space-md) 0;
+    }
+    .timeline-blocks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+    }
+    .timeline-block-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-sm);
+    }
+    .timeline-block ul {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .timeline-block li {
+      font-size: 0.87rem;
+      color: var(--color-text-muted);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .timeline-block li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--color-primary);
+      font-size: 0.7rem;
+    }
+    .timeline-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+    }
+    .timeline-card-media {
+      width: 100%;
+      height: 220px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--color-border-soft);
+      box-shadow: var(--shadow-sm);
+    }
+    .timeline-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .timeline-card:hover .timeline-card-media img {
+      transform: scale(1.03);
+    }
+
+    /* ── VOLUNTEERING / EDUCATION SPLIT ──────── */
+    .extra-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+      margin-top: var(--space-2xl);
+    }
+    .extra-section-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: var(--space-lg);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .extra-section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--color-border-soft);
+    }
+    .extra-item {
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--color-border-soft);
+    }
+    .extra-item:last-child { border-bottom: none; }
+    .extra-item-title {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--color-text);
+    }
+    .extra-item-sub {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      margin-top: 2px;
+    }
+    .extra-item-date {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--color-primary);
+      margin-top: 4px;
+    }
+
+    /* ── EDUCATION ───────────────────────────── */
+    .edu-card {
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      margin-top: var(--space-2xl);
+    }
+    .edu-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: var(--space-sm);
+    }
+    .edu-degree {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    .edu-school {
+      font-size: 1rem;
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+    .edu-period {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      opacity: 0.65;
+      margin-top: var(--space-sm);
+    }
+    .edu-desc {
+      font-size: 0.87rem;
+      opacity: 0.8;
+      margin-top: var(--space-md);
+    }
+
+    @media (max-width: 1000px) {
+      .timeline-card {
+        grid-template-columns: 1fr 180px;
+        gap: var(--space-md);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .timeline::before { left: 16px; }
+      .timeline-item { padding-left: 48px; }
+      .timeline-dot { left: 8px; }
+      .timeline-card {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+      }
+      .timeline-card-media {
+        order: -1;
+        height: 180px;
+      }
+      .timeline-blocks { grid-template-columns: 1fr; }
+      .extra-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">tc<span>.</span>portfolio</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="experience.html" class="nav-link active">Experience</a></li>
+      <li><a href="academic-projects.html" class="nav-link">Academic Projects</a></li>
+      <li><a href="personal-projects.html" class="nav-link">Personal Projects</a></li>
+      <li><a href="CV_Theo_Couasnon.pdf" download class="nav-link">Resume</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="experience.html" class="nav-link active">Experience</a>
+  <a href="academic-projects.html" class="nav-link">Academic Projects</a>
+  <a href="personal-projects.html" class="nav-link">Personal Projects</a>
+  <a href="CV_Theo_Couasnon.pdf" download class="nav-link">Resume</a>
+</div>
+
+<main class="page-main">
+
+  <div class="page-header" style="background-image: url('Photo%20ressources/mclaren%202025%20internship.jpg');">
+    <div class="container">
+      <p class="section-label">Career</p>
+      <h1 class="section-title">Professional Experience</h1>
+      <p class="section-intro">
+        From F1 paddock to DIL simulators — a track record across Motorsport's top engineering environments.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ TIMELINE ═══════════════════ -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="timeline">
+
+        <!-- DALLARA -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-content">
+              <div class="timeline-card-top">
+                <div>
+                  <p class="timeline-company">Dallara</p>
+                  <p class="timeline-role">Simulator Engineer Intern</p>
+                  <p class="timeline-location">📍 Varano de' Melegari, Italy</p>
+                </div>
+                <span class="timeline-period">Feb – Jul 2026</span>
+              </div>
+              <div class="timeline-divider"></div>
+              <div class="timeline-blocks">
+                <div class="timeline-block">
+                  <p class="timeline-block-title">Development</p>
+                  <ul>
+                    <li>Full IT architecture for Dynisma DMG-360XY simulator installation</li>
+                    <li>Simulink-based software wrapper gathering various models and hardware interfaces</li>
+                    <li>Designed "universal" add-on CAN display for additional chassis information</li>
+                  </ul>
+                </div>
+                <div class="timeline-block">
+                  <p class="timeline-block-title">Operational</p>
+                  <ul>
+                    <li>Managing customer sessions (LMDh, IndyCar, F2) in Varano and Indianapolis</li>
+                    <li>Dallara DIL Simulators (rFpro / Assetto Corsa)</li>
+                    <li>Overhauled internal documentation for procedures and methods</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="timeline-tags">
+                <span class="tag">Matlab / Simulink</span>
+                <span class="tag">CAN</span>
+                <span class="tag">DIL Simulator</span>
+                <span class="tag">LMDh</span>
+                <span class="tag">IndyCar</span>
+              </div>
+            </div>
+            <div class="timeline-card-media">
+              <img src="Photo%20ressources/Dallara%20simulator.webp" alt="Dallara Simulator" />
+            </div>
+          </div>
+        </div>
+
+        <!-- McLAREN F1 — CONTROLS -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-content">
+              <div class="timeline-card-top">
+                <div>
+                  <p class="timeline-company">McLaren F1 Team</p>
+                  <p class="timeline-role">F1 Control Systems Engineer Intern</p>
+                  <p class="timeline-location">📍 Woking, United Kingdom</p>
+                </div>
+                <span class="timeline-period">Jul – Dec 2025</span>
+              </div>
+              <div class="timeline-divider"></div>
+              <div class="timeline-blocks">
+                <div class="timeline-block">
+                  <p class="timeline-block-title">Operational</p>
+                  <ul>
+                    <li>Shift tuning for 2026 gearbox / PU on gearbox dyno &amp; HIL</li>
+                    <li>Factory support for trackside engineers during race weekends via live data (Atlas)</li>
+                  </ul>
+                </div>
+                <div class="timeline-block">
+                  <p class="timeline-block-title">Tool Development</p>
+                  <ul>
+                    <li>2026 energy deployment reliability tools (HIL, System Monitor)</li>
+                    <li>Custom gearbox performance and reliability analysis app in PowerBI &amp; SQL</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="timeline-tags">
+                <span class="tag tag-primary">McLaren F1</span>
+                <span class="tag">Atlas</span>
+                <span class="tag">SQL</span>
+                <span class="tag">PowerBI</span>
+                <span class="tag">HIL</span>
+                <span class="tag">Gearbox Tuning</span>
+              </div>
+            </div>
+            <div class="timeline-card-media">
+              <img src="Photo%20ressources/mclaren%202025%20internship.jpg" alt="McLaren Controls Internship" />
+            </div>
+          </div>
+        </div>
+
+        <!-- McLAREN F1 — MECHANICAL -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-content">
+              <div class="timeline-card-top">
+                <div>
+                  <p class="timeline-company">McLaren F1 Team</p>
+                  <p class="timeline-role">F1 Mechanical Design Engineer Intern</p>
+                  <p class="timeline-location">📍 Woking, United Kingdom</p>
+                </div>
+                <span class="timeline-period">Jun – Sep 2024</span>
+              </div>
+              <div class="timeline-divider"></div>
+              <div class="timeline-blocks">
+                <div class="timeline-block">
+                  <p class="timeline-block-title">Transmission / Gearbox</p>
+                  <ul>
+                    <li>Reliability upgrade on the MCL38 (2024), concept to production</li>
+                    <li>Designed and coordinated modifications for 2026 test rig</li>
+                  </ul>
+                </div>
+                <div class="timeline-block">
+                  <p class="timeline-block-title">Process Improvement</p>
+                  <ul>
+                    <li>Feature catalogs (UDF) in Catia 3DX for reliability and efficiency</li>
+                    <li>Documentation standardising design processes across the team</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="timeline-tags">
+                <span class="tag tag-primary">McLaren F1</span>
+                <span class="tag">Catia 3DX</span>
+                <span class="tag">Gearbox Design</span>
+                <span class="tag">MCL38</span>
+              </div>
+            </div>
+            <div class="timeline-card-media">
+              <img src="Photo%20ressources/mclaren%202024.jpg" alt="McLaren Mechanical Internship" />
+            </div>
+          </div>
+        </div>
+
+        <!-- PRODRIVE -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-content">
+              <div class="timeline-card-top">
+                <div>
+                  <p class="timeline-company">Prodrive</p>
+                  <p class="timeline-role">GT3/GT4 Motorsport Engineer Intern</p>
+                  <p class="timeline-location">📍 Banbury, United Kingdom</p>
+                </div>
+                <span class="timeline-period">Jul – Aug 2023</span>
+              </div>
+              <div class="timeline-divider"></div>
+              <div class="timeline-blocks">
+                <div class="timeline-block">
+                  <p class="timeline-block-title">Design</p>
+                  <ul>
+                    <li>Designed 10+ chassis and bodywork parts for Aston Martin GT3 Evo &amp; GT4 Evo</li>
+                    <li>Included aero dive planes and suspension mounts; CFD and FEA feedback loops</li>
+                  </ul>
+                </div>
+                <div class="timeline-block">
+                  <p class="timeline-block-title">Trackside</p>
+                  <ul>
+                    <li>Assisted Aston Martin Racing engineers at ADAC GT4 Nürburgring</li>
+                    <li>Windarab data analysis for race performance review</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="timeline-tags">
+                <span class="tag">SolidWorks</span>
+                <span class="tag">CFD</span>
+                <span class="tag">FEA</span>
+                <span class="tag">Windarab</span>
+                <span class="tag">GT3 / GT4</span>
+              </div>
+            </div>
+            <div class="timeline-card-media">
+              <img src="Photo%20ressources/prodrive%20-%20aston%20gt3%20evo.jpg" alt="Prodrive Aston Martin GT3 Evo" />
+            </div>
+          </div>
+        </div>
+
+        <!-- PH SPORT -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-content">
+              <div class="timeline-card-top">
+                <div>
+                  <p class="timeline-company">PH Sport</p>
+                  <p class="timeline-role">WRC Rally Mechanic</p>
+                  <p class="timeline-location">📍 Langres, France</p>
+                </div>
+                <span class="timeline-period">Aug 2022</span>
+              </div>
+              <div class="timeline-divider"></div>
+              <div class="timeline-blocks">
+                <div class="timeline-block">
+                  <p class="timeline-block-title">Duties</p>
+                  <ul>
+                    <li>Maintenance and repair on Citroën DS3 WRC &amp; C3 Rally2</li>
+                    <li>Rally prep work: asphalt/dirt setups, tire fitting, truck loading</li>
+                  </ul>
+                </div>
+                <div class="timeline-block">
+                  <p class="timeline-block-title">Context</p>
+                  <ul>
+                    <li>Hands-on experience at professional rally service park</li>
+                    <li>Exposure to top-level WRC preparation workflows</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="timeline-tags">
+                <span class="tag">WRC</span>
+                <span class="tag">Rally Mechanics</span>
+                <span class="tag">Vehicle Setup</span>
+              </div>
+            </div>
+            <div class="timeline-card-media">
+              <img src="Photo%20ressources/phsport.jpg" alt="PH Sport Rally Mechanic" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 2C COMPETITION -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-content">
+              <div class="timeline-card-top">
+                <div>
+                  <p class="timeline-company">2C Competition</p>
+                  <p class="timeline-role">Motorsport Mechanic &amp; Engineer Intern</p>
+                  <p class="timeline-location">📍 Thiers, France</p>
+                </div>
+                <span class="timeline-period">Jun – Jul 2022</span>
+              </div>
+              <div class="timeline-divider"></div>
+              <div class="timeline-blocks">
+                <div class="timeline-block">
+                  <p class="timeline-block-title">Engineering &amp; Setup</p>
+                  <ul>
+                    <li>Designed an electrical wiring harness extension to integrate new components (compliant with FIA rules)</li>
+                    <li>Assisted race engineers during car setup and track sessions</li>
+                  </ul>
+                </div>
+                <div class="timeline-block">
+                  <p class="timeline-block-title">Mechanical</p>
+                  <ul>
+                    <li>Performed complete rear subframe overhaul on a Skoda Fabia Rally2</li>
+                    <li>Conducted non-destructive crack checks and straightness verifications</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="timeline-tags">
+                <span class="tag">Rally2</span>
+                <span class="tag">FIA Compliance</span>
+                <span class="tag">Wiring Harness</span>
+                <span class="tag">Car Setup</span>
+              </div>
+            </div>
+            <div class="timeline-card-media">
+              <img src="Photo%20ressources/2c.jpeg" alt="2C Competition Skoda Fabia Rally2" />
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════ EDUCATION ═══════════════════ -->
+  <section style="padding: var(--space-3xl) 0; background: var(--color-surface);">
+    <div class="container">
+      <p class="section-label">Education</p>
+      <h2 class="section-title">Academic Background</h2>
+
+      <div class="edu-card reveal">
+        <p class="edu-label">Master's Degree · Engineering School</p>
+        <p class="edu-degree">Master's in Automotive Engineering</p>
+        <p class="edu-school">ESTACA — École Supérieure des Techniques Aéronautiques et de Construction Automobile</p>
+        <p class="edu-period">2021 – 2027 · Laval, France</p>
+        <p class="edu-desc">
+          Grande École d'ingénieurs specialising in automotive engineering. Major includes vehicle
+          dynamics, powertrain systems, embedded systems, CAD, and project management.
+          Programme includes alternating industry internships.
+        </p>
+      </div>
+
+      <!-- Volunteering -->
+      <div class="extra-grid" style="margin-top: var(--space-2xl)">
+        <div>
+          <p class="section-label" style="margin-bottom: var(--space-lg)">Volunteering</p>
+          <div class="extra-item reveal">
+            <p class="extra-item-title">Le Mans 24h — Welcome Desk Host &amp; Tour Guide</p>
+            <p class="extra-item-sub">Automobile Club de l'Ouest (ACO)</p>
+            <p class="extra-item-date">2022 / 2023 / 2024 / 2025</p>
+          </div>
+          <div class="extra-item reveal">
+            <p class="extra-item-title">Volunteer — McLaren</p>
+            <p class="extra-item-sub">2024 Goodwood Festival of Speed</p>
+            <p class="extra-item-date">2024</p>
+          </div>
+          <div class="extra-item reveal">
+            <p class="extra-item-title">President — ITD Motorsport Club</p>
+            <p class="extra-item-sub">Club of Estaca (100+ members). Engine teardown, welding, car setup initiations.</p>
+            <p class="extra-item-date">2023</p>
+          </div>
+          <div class="extra-item reveal">
+            <p class="extra-item-title">Teacher — ITD Technical Initiations</p>
+            <p class="extra-item-sub">Engine Teardown, Welding, Car Setup</p>
+            <p class="extra-item-date">2023 – 2024</p>
+          </div>
+        </div>
+
+        <div>
+          <p class="section-label" style="margin-bottom: var(--space-lg)">Interests</p>
+          <div class="extra-item reveal">
+            <p class="extra-item-title">🎬 Content Creation</p>
+            <p class="extra-item-sub">YouTube channel with 200k+ views, sharing my engineering and mechanics projects.</p>
+          </div>
+          <div class="extra-item reveal">
+            <p class="extra-item-title">🔧 Vintage Mechanics</p>
+            <p class="extra-item-sub">BMW E30 restoration · Yamaha 125 café racer build</p>
+          </div>
+          <div class="extra-item reveal">
+            <p class="extra-item-title">⚡ Electronics</p>
+            <p class="extra-item-sub">STM32-based VCU project · self-made helmet intercom system · electric skateboard Li-ion battery</p>
+          </div>
+          <div class="extra-item reveal">
+            <p class="extra-item-title">🏔️ Downhill Mountain Biking</p>
+          </div>
+          <div class="extra-item reveal">
+            <p class="extra-item-title">✈️ Travelling &amp; Discovery</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-inner">
+        <p class="section-label">Contact</p>
+        <h2 class="contact-title">Ready to join a challenging motorsport environment</h2>
+        <p class="contact-desc">
+          Open to full-time roles in motorsport engineering from February 2027.
+          Based in France — open to relocation internationally.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:theo.pmcouasnon@gmail.com" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+            theo.pmcouasnon@gmail.com
+          </a>
+          <a href="tel:+33768643304" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.29 6.29l1.51-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            +33 7 68 64 33 04
+          </a>
+          <a href="https://linkedin.com/in/theocouasnon" target="_blank" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p class="footer-name">tc.portfolio</p>
+    <div class="footer-links">
+      <a href="index.html" class="footer-link">Home</a>
+      <a href="experience.html" class="footer-link">Experience</a>
+      <a href="academic-projects.html" class="footer-link">Academic</a>
+      <a href="personal-projects.html" class="footer-link">Personal</a>
+    </div>
+    <p class="footer-copy">© 2026 Theo Couasnon · Motorsport Systems Engineer · France</p>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 10));
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('navMobile').classList.toggle('open');
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
