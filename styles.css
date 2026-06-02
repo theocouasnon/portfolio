@@ -122,6 +122,11 @@ ul { list-style: none; }
   color: #fff;
   border-color: var(--color-primary);
 }
+.tag-accent {
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+  border-color: var(--color-accent-mid);
+}
 .btn {
   display: inline-flex;
   align-items: center;
